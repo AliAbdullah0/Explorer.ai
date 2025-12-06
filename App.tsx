@@ -40,16 +40,29 @@ function App() {
                 <h1 className="text-xl font-bold text-slate-900 tracking-tight text-orange-400 hidden sm:block">explorer.<span className="text-black">ai</span></h1>
             </div>
 
-            <form onSubmit={handleSearch} className="relative flex-1 max-w-md ml-4">
-              <input
-                type="text"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Where to next? (e.g., Kyoto)"
-                className="w-full pl-10 pr-4 py-2.5 bg-slate-100 border-none rounded-full text-slate-800 focus:ring-2 focus:ring-slate-900 focus:bg-white transition-all outline-none text-sm placeholder:text-slate-400"
-              />
-              <SearchIcon className="absolute left-3.5 top-2.5 w-5 h-5 text-slate-400" />
-            </form>
+          <form onSubmit={handleSearch} className="relative flex items-center flex-1 max-w-md ml-4 gap-2">
+              
+  <div className="relative flex-1">
+    <input
+      type="text"
+      value={query}
+      onChange={(e) => setQuery(e.target.value)}
+      placeholder="Where to next? (e.g., Kyoto)"
+      className="w-full pl-10 pr-4 py-2.5 bg-slate-100 border-none rounded-full text-slate-800 focus:ring-2 focus:ring-slate-900 focus:bg-white transition-all outline-none text-sm placeholder:text-slate-400"
+    />
+    <SearchIcon className="absolute left-3.5 top-2.5 w-5 h-5 text-slate-400" />
+  </div>
+
+  <button
+    type="submit"
+    className="bg-orange-400 rounded-3xl md:px-4  md:text-base text-sm px-3 py-2.5 text-sm font-semibold text-white hover:opacity-100 whitespace-nowrap"
+  >
+    Search
+  </button>
+
+</form>
+
+
         </div>
       </header>
 
