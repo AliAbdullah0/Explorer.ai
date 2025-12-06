@@ -53,7 +53,7 @@ export const fetchCityGuide = async (city: string): Promise<CityGuideData> => {
   const prompt = `Create a comprehensive travel guide for "${city}". 
   Include the top 3 must-visit spots (attractions), 3 highly-rated hotels, and 3 best restaurants. 
   For each item, strictly provide honest advantages and disadvantages to help a traveler decide.
-  Keep the tone professional yet inviting.`;
+  Keep the tone professional yet inviting..Don't invent things from ur own just tell user such place doesn't exists and return dashes in everything`;
 
   try {
     const response = await ai.models.generateContent({
@@ -62,7 +62,7 @@ export const fetchCityGuide = async (city: string): Promise<CityGuideData> => {
       config: {
         responseMimeType: 'application/json',
         responseSchema: guideSchema,
-        systemInstruction: "You are an expert travel concierge with a critical eye. You value honesty and brevity.",
+        systemInstruction: "You are an expert travel concierge with a critical eye. You value honesty and brevity.Don't invent things from ur own just tell user such place doesn't exists and return dashes in everything",
       },
     });
 
