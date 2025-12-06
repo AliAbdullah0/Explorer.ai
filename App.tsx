@@ -147,9 +147,9 @@ function App() {
       
       <footer className="bg-white border-t border-slate-200 py-8 mt-auto">
         <div className="max-w-6xl mx-auto px-4 text-center text-slate-500 text-sm">
-            <p>&copy; {new Date().getFullYear()} ICT Project </p>
+            <p className="mb-1">&copy; {new Date().getFullYear()} ICT Project </p>
             <p><span className="font-semibold">Areej Afraz - 01-136252-012</span></p>
-            <p><span className="font-semibold">Javeria Abbas - 01-136252-010</span></p>
+            <p><span className="font-semibold">Javeria Abbas - 01-136252-020</span></p>
         </div>
       </footer>
     </div>
